@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: 'Igreja Anglicana Vida',
     images: [
       {
-        url: '/logo.svg',
+        url: '/logo.png',
         width: 1200,
         height: 630,
         alt: 'Igreja Anglicana Vida',
@@ -35,7 +35,7 @@ export default function RootLayout({
       <head>
         <meta property="og:title" content="Igreja Anglicana Vida" />
         <meta property="og:description" content="Site oficial da Igreja Anglicana Vida" />
-        <meta property="og:image" content="https://anglicanavida.com.br/logo.svg" />
+        <meta property="og:image" content="https://anglicanavida.com.br/logo.png" />
         <meta property="og:url" content="https://anglicanavida.com.br" />
         <meta property="og:type" content="website" />
       </head>
