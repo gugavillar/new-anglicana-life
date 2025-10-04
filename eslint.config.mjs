@@ -5,6 +5,7 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import tseslint from 'typescript-eslint'
 import globals from 'globals'
 import prettierPlugin from 'eslint-plugin-prettier'
+import importPlugin from 'eslint-plugin-import'
 
 export default [
   js.configs.recommended,
@@ -13,6 +14,7 @@ export default [
   {
     files: ['**/*.{ts,tsx,js,jsx}'],
     ignores: ['.next/**', 'node_modules/**', 'dist/**'],
+
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -22,12 +24,15 @@ export default [
         ...globals.node,
       },
     },
+
     plugins: {
       react: reactPlugin,
       'react-hooks': reactHooksPlugin,
       '@next/next': nextPlugin,
       prettier: prettierPlugin,
+      import: importPlugin, // 👈 adicionado aqui
     },
+
     rules: {
       /* React */
       'react/react-in-jsx-scope': 'off',
@@ -42,6 +47,45 @@ export default [
       'no-console': 'warn',
       semi: ['error', 'never'],
 
+      /* Ordenação de imports */
+      'import/order': [
+        'error',
+        {
+          groups: [
+            ['external', 'builtin'],
+            'internal',
+            ['parent', 'sibling', 'index'],
+            'object',
+            'type',
+          ],
+          pathGroups: [
+            {
+              pattern: '{react,react-dom/**,next,next/**}',
+              group: 'external',
+              position: 'before',
+            },
+            {
+              pattern: '{@/components,@/components/Icons}',
+              group: 'internal',
+              position: 'before',
+            },
+            {
+              pattern: '{@prismicio/**,@prismicio/*,@/prismicio,@/prismic-types}',
+              group: 'external',
+              position: 'before',
+            },
+          ],
+
+          pathGroupsExcludedImportTypes: ['react'],
+          'newlines-between': 'always',
+
+          alphabetize: {
+            order: 'asc',
+            caseInsensitive: true,
+          },
+        },
+      ],
+
       /* Prettier integrado */
       'prettier/prettier': [
         'error',
@@ -53,6 +97,7 @@ export default [
         },
       ],
     },
+
     settings: {
       react: { version: 'detect' },
     },
