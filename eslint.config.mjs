@@ -30,7 +30,7 @@ export default [
       'react-hooks': reactHooksPlugin,
       '@next/next': nextPlugin,
       prettier: prettierPlugin,
-      import: importPlugin, // 👈 adicionado aqui
+      import: importPlugin,
     },
 
     rules: {

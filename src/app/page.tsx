@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
+import { Logo } from '@/components'
+
 export default function Home() {
   return (
     <div className="flex flex-col gap-4 items-center size-full justify-center px-4">
@@ -11,7 +13,7 @@ export default function Home() {
           continue acompanhando tudo o que Deus tem feito em nossa igreja!
         </h2>
       </div>
-      <Image src="/logo.svg" alt="Logo" width={200} height={200} />
+      <Logo width={200} height={200} />
       <div className="flex flex-col items-center justify-center">
         <h3 className="text-lg">Siga-nos nas redes sociais</h3>
         <div className="flex items-center gap-4">

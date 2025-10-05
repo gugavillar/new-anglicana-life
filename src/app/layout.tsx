@@ -45,7 +45,7 @@ export default function RootLayout({
         <meta property="og:url" content="https://anglicanavida.com.br" />
         <meta property="og:type" content="website" />
       </head>
-      <body className="h-dvh w-dvw antialiased bg-slate-200">{children}</body>
+      <body className="h-dvh w-dvw antialiased bg-background text-white">{children}</body>
       {!isDevelopment && gaId && <GoogleAnalytics gaId={gaId} />}
     </html>
   )
