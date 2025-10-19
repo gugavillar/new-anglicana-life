@@ -1,49 +1,36 @@
 {
-  "name": "new-anglicana-life",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint --fix src --max-warnings=0",
-    "prepare": "husky",
-    "check-types": "tsc --noemit"
-  },
-  "dependencies": {
-    "@next/third-parties": "^15.5.4",
-    "next": "15.5.4",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@eslint/js": "^9.37.0",
-    "@next/eslint-plugin-next": "^15.5.4",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "@typescript-eslint/eslint-plugin": "^8.45.0",
-    "@typescript-eslint/parser": "^8.45.0",
-    "eslint": "9",
-    "eslint-config-next": "15.5.4",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-prettier": "^5.5.4",
-    "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^6.1.1",
-    "globals": "^16.4.0",
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.3",
-    "prettier": "^3.6.2",
-    "tailwindcss": "^4",
-    "typescript": "^5",
-    "typescript-eslint": "^8.45.0"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "pnpm run lint"
-    ]
-  }
+	"name": "new-anglicana-life",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build --turbopack",
+		"start": "next start",
+		"biome": "biome check --write --no-errors-on-unmatched",
+		"prepare": "husky",
+		"check-types": "tsc --noemit"
+	},
+	"dependencies": {
+		"@next/third-parties": "^15.5.4",
+		"next": "15.5.4",
+		"react": "19.1.0",
+		"react-dom": "19.1.0",
+		"react-microsoft-clarity": "^2.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.6",
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"globals": "^16.4.0",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.2.3",
+		"prettier": "^3.6.2",
+		"tailwindcss": "^4",
+		"typescript": "^5"
+	},
+	"lint-staged": {
+		"*.{ts,tsx,js,jsx}": ["biome check --staged"]
+	}
 }
