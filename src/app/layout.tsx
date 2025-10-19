@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 	icons: {
 		icon: 'logo.svg',
 	},
+	metadataBase: new URL('https://anglicanavida.com.br/'),
 	openGraph: {
 		description: 'Site oficial da Igreja Anglicana Vida',
 		images: [
