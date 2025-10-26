@@ -1,5 +1,37 @@
 @import "tailwindcss";
+@layer base {
+	@font-face {
+		font-family: "SF Pro Display";
+		font-style: normal;
+		font-weight: 400;
+		src: url("https://fonts.cdnfonts.com/s/17256/SF-Pro-Display-Regular.woff") format("woff");
+	}
+
+	@font-face {
+		font-family: "SF Pro Display";
+		font-style: normal;
+		font-weight: 500;
+		src: url("https://fonts.cdnfonts.com/s/17256/SF-Pro-Display-Regular.woff") format("woff");
+	}
+
+	@font-face {
+		font-family: "SF Pro Display";
+		font-style: normal;
+		font-weight: 600;
+		src: url("https://fonts.cdnfonts.com/s/17256/SF-Pro-Display-Bold.woff") format("woff");
+	}
+
+	@font-face {
+		font-family: "SF Pro Display";
+		font-style: normal;
+		font-weight: 700;
+		src: url("https://fonts.cdnfonts.com/s/17256/SF-Pro-Display-Bold.woff") format("woff");
+	}
+}
 
 @theme {
 	--color-background: #1e1e1e;
+	--font-display: "SF Pro Display", sans-serif;
+	--shadow-rounded: 0 0 0 1px #fff;
+	--radius-base: 3.125rem;
 }

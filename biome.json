@@ -22,7 +22,7 @@
 			}
 		},
 		"enabled": true,
-		"includes": ["src/**/*.{js,jsx,ts,tsx}"]
+		"includes": ["src/**/*.{js,jsx,ts,tsx,mts,mjs}"]
 	},
 	"files": { "ignoreUnknown": true },
 	"formatter": {
@@ -50,6 +50,9 @@
 		}
 	},
 	"linter": {
+		"domains": {
+			"next": "recommended"
+		},
 		"enabled": true,
 		"rules": {
 			"recommended": false,
