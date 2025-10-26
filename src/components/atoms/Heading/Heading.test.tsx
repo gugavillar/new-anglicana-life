@@ -8,20 +8,20 @@ const levels = [1, 2, 3, 4]
 
 describe('Heading', () => {
 	it('should render correctly', () => {
-		const { getByRole } = render(<Heading>Teste</Heading>)
+		const { getByRole } = render(<Heading>Test</Heading>)
 
-		expect(getByRole('heading', { name: 'Teste' })).toBeInTheDocument()
+		expect(getByRole('heading', { name: 'Test' })).toBeInTheDocument()
 	})
 
 	it('should accept custom class name', () => {
-		const { getByRole } = render(<Heading className="custom-class">Teste</Heading>)
+		const { getByRole } = render(<Heading className="custom-class">Test</Heading>)
 
-		expect(getByRole('heading', { name: 'Teste' })).toHaveClass('custom-class')
+		expect(getByRole('heading', { name: 'Test' })).toHaveClass('custom-class')
 	})
 
 	it.each(variants)('renders correctly with variant %s', (variant) => {
-		const { getByRole } = render(<Heading as={variant}>Teste</Heading>)
-		const element = getByRole('heading', { name: 'Teste' })
+		const { getByRole } = render(<Heading as={variant}>Test</Heading>)
+		const element = getByRole('heading', { name: 'Test' })
 
 		expect(element).toHaveClass(classElement[variant])
 		expect(element.tagName.toLowerCase()).toBe(variant)
