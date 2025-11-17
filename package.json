@@ -12,37 +12,39 @@
 		"test": "vitest"
 	},
 	"dependencies": {
-		"@next/third-parties": "^15.5.4",
-		"next": "15.5.4",
-		"react": "19.1.0",
-		"react-dom": "19.1.0",
+		"@next/third-parties": "^15.5.6",
+		"next": "15.5.6",
+		"react": "19.2.0",
+		"react-dom": "19.2.0",
 		"react-microsoft-clarity": "^2.0.0"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "2.2.6",
-		"@tailwindcss/postcss": "^4",
+		"@biomejs/biome": "2.3.6",
+		"@tailwindcss/postcss": "^4.1.17",
 		"@testing-library/dom": "^10.4.1",
 		"@testing-library/jest-dom": "^6.9.1",
 		"@testing-library/react": "^16.3.0",
 		"@types/mocha": "^10.0.10",
-		"@types/node": "^20",
-		"@types/react": "^19",
-		"@types/react-dom": "^19",
-		"@vitejs/plugin-react": "^5.1.0",
-		"@vitest/coverage-v8": "4.0.3",
-		"globals": "^16.4.0",
+		"@types/node": "^24.10.1",
+		"@types/react": "^19.2.5",
+		"@types/react-dom": "^19.2.3",
+		"@vitejs/plugin-react": "^5.1.1",
+		"@vitest/coverage-v8": "4.0.10",
+		"globals": "^16.5.0",
 		"husky": "^9.1.7",
 		"install": "^0.13.0",
-		"jsdom": "^27.0.1",
-		"lint-staged": "^16.2.3",
+		"jsdom": "^27.2.0",
+		"lint-staged": "^16.2.6",
 		"prettier": "^3.6.2",
-		"tailwind-merge": "^3.3.1",
-		"tailwindcss": "^4",
-		"typescript": "^5",
+		"tailwind-merge": "^3.4.0",
+		"tailwindcss": "^4.1.17",
+		"typescript": "^5.9.3",
 		"vite-tsconfig-paths": "^5.1.4",
-		"vitest": "^4.0.3"
+		"vitest": "^4.0.10"
 	},
 	"lint-staged": {
-		"*.{ts,tsx,js,jsx}": ["biome check --staged"]
+		"*.{ts,tsx,js,jsx}": [
+			"biome check --staged"
+		]
 	}
 }
